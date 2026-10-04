@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ChinookAlbumApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ChinookAlbumApiApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(ChinookAlbumApiApplication.class, args);
+    }
 }
