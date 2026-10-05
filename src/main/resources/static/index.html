@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chinook Album API</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #1e3a5f 0%, var(--bg) 60%);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        main {
+            width: min(560px, 90vw);
+            padding: 40px;
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        h1 { margin: 0 0 8px; font-size: 2rem; }
+        p { color: var(--muted); line-height: 1.5; }
+        .endpoints {
+            margin: 24px 0;
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.9rem;
+        }
+        .endpoints li {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+        }
+        .verb { display: inline-block; width: 64px; color: var(--accent); font-weight: 600; }
+        a.button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--accent);
+            color: #0b1220;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 999px;
+            transition: transform 0.15s ease;
+        }
+        a.button:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Chinook Album API</h1>
+        <p>A layered Spring Boot service backed by PostgreSQL.</p>
+        <ul class="endpoints">
+            <li><span class="verb">GET</span>/api/albums</li>
+            <li><span class="verb">GET</span>/api/albums/{id}</li>
+            <li><span class="verb">POST</span>/api/albums</li>
+            <li><span class="verb">PUT</span>/api/albums/{id}</li>
+            <li><span class="verb">DELETE</span>/api/albums/{id}</li>
+        </ul>
+        <a class="button" href="/swagger-ui.html">Open Swagger</a>
+    </main>
+</body>
+</html>
